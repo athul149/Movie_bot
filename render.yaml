@@ -1,7 +1,7 @@
 services:
   - type: web
     name: movie-bot
-    env: python
+    env: python3
     repo: https://github.com/athul149/Movie_bot
     branch: main
     buildCommand: pip install -r requirements.txt
