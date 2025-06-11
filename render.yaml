@@ -1,7 +1,16 @@
 services:
   - type: web
-    name: telegram-movie-bot
+    name: movie-bot
     env: python
-    plan: free
-    buildCommand: ""
+    repo: https://github.com/athul149/Movie_bot
+    branch: main
+    buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        value: 7776491935:AAGGrhoNKPHobiVGtc2O3KQghrZK3oi3nUE
+      - key: ADMIN_ID
+        value: "965159279"
+      - key: CHANNEL_ID
+        value: "-1001827062484"
